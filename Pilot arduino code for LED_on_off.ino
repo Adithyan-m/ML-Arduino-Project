@@ -1,4 +1,4 @@
-String inbyte ;    
+String inp ;    
 
 void setup() {
 
@@ -11,9 +11,9 @@ void loop() {
 
   if (Serial.available() > 0) {
 
-  inbyte = Serial.readStringUntil('\n');
+  inp = Serial.readStringUntil('\n');
 
-    if (inbyte == "on") {
+    if (inp == "on") {
 
       digitalWrite(3, HIGH);
 
@@ -21,7 +21,7 @@ void loop() {
 
     }
 
-    else if (inbyte == "off") {
+    else if (inp == "off") {
 
       digitalWrite(3, LOW);
 
